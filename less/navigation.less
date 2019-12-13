@@ -1,16 +1,31 @@
 // Navigation Styles here
 
 .navbar{
-    display: flex;
-    justify-content: space-between;
-    
-    .logo{
-        
+    .displayFlex(space-between, center);
+    padding: 1.5rem 2rem;
+    border-bottom:2px dashed @navigation-border;
+    margin: 0 -5rem;
+
+    @media @mobile{
+        display: flex;
+        flex-direction: column;
     }
 
+
     nav{
+        width: 50%;
+        .displayFlex(space-between, center);
+
+        @media @mobile{
+            width: 100%;
+            padding-top: 1rem;
+            .displayFlex(space-around, center)
+        }
+
         a{
             text-decoration: none;
+            color: @shark;
+            font-size: 1.5rem;
         }
     }
     

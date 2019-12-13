@@ -1,1 +1,22 @@
 // Mixins in here
+.displayFlex(@justify, @align) {
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.custButt(@bg-color, @width, @font-color){
+    .displayFlex(center, center);
+    background-color: @bg-color;
+    margin: 0 10px 5px;
+    cursor: pointer;
+    width: @width;
+    height: 4.5rem;
+    font-size: 1.6rem;
+    border-radius: 10px;
+    color: @font-color;
+
+    @media @mobile{
+        width: 100%;
+    }
+}
